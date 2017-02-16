@@ -10,8 +10,6 @@ import UIKit
 
 class repoCell: UITableViewCell {
     
-
-    
     @IBOutlet weak var appName: UILabel!
     @IBOutlet weak var forkLabel: UILabel!
     @IBOutlet weak var starLabel: UILabel!
@@ -20,8 +18,8 @@ class repoCell: UITableViewCell {
     @IBOutlet weak var avatar: UIImageView!
     
     var repo: GithubRepo! {
+        
         didSet{
-            
             appName.text = repo.name
             nameLabel.text = ("By \(repo.ownerHandle!)")
             starLabel.text = String(describing: repo.stars!)
@@ -38,7 +36,6 @@ class repoCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
 

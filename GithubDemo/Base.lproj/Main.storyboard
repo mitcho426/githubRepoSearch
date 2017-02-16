@@ -53,9 +53,12 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qqa-cJ-wrx">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qqa-cJ-wrx">
                                             <rect key="frame" x="12" y="47" width="58" height="70"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="58" id="7Um-iv-3x4"/>
+                                                <constraint firstAttribute="height" constant="70" id="Mau-Qj-zw3"/>
+                                            </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="by name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3h-K2-cTk">
                                             <rect key="frame" x="12" y="18" width="66" height="21"/>
@@ -65,6 +68,10 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="qqa-cJ-wrx" firstAttribute="leading" secondItem="obG-ek-PMr" secondAttribute="leading" constant="12" id="4j4-ei-Rku"/>
+                                        <constraint firstAttribute="bottom" secondItem="qqa-cJ-wrx" secondAttribute="bottom" constant="28" id="cli-dQ-QXB"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="appName" destination="PxH-JR-Y85" id="M8k-zB-u4i"/>
