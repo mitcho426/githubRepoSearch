@@ -44,7 +44,7 @@ class RepoResultsViewController: UIViewController, UITableViewDataSource, UITabl
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return repos.count
+        return repos?.count ?? 0
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

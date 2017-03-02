@@ -32,6 +32,13 @@ class repoCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        descriptionLabel.preferredMaxLayoutWidth = descriptionLabel.frame.size.width
+    
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        descriptionLabel.preferredMaxLayoutWidth = descriptionLabel.frame.size.width
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
