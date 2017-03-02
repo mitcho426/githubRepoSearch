@@ -46,7 +46,7 @@ class GithubRepo: CustomStringConvertible {
             }
         }
         
-        if let repoDescription = jsonResult["description"] as? String {
+        if (jsonResult["description"] as? String) != nil {
             self.repoDescription = jsonResult["description"] as? String
         }
         

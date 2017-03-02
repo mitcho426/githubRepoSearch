@@ -57,6 +57,10 @@ class RepoResultsViewController: UIViewController, UITableViewDataSource, UITabl
         return cell
     }
 
+    @IBAction func settingsOnTap(_ sender: Any) {
+        self.performSegue(withIdentifier: "settingsSegue", sender: nil)
+    }
+    
     // Perform the search.
     fileprivate func doSearch() {
         
@@ -78,7 +82,16 @@ class RepoResultsViewController: UIViewController, UITableViewDataSource, UITabl
                 print(error!)
         })
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let settingsVC = segue.destination as! SettingsViewController
+        settingsVC.settings = self.searchSettings
+        settingsVC.delegate = self
+    }
 }
+
+
+
 
 // SearchBar methods
 extension RepoResultsViewController: UISearchBarDelegate {
